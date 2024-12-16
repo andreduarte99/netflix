@@ -1,0 +1,26 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+.app_background { 
+    display: flex;
+    flex-direction: column;
+    padding: variaveis.$padding-padrao;
+    background-image: url('../../assets/banner.png'); /* Corrigido */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .container_banner {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+        .descricao_banner{
+            @include mixins.ff-fs-fw-cl(variaveis.$font-primaria, 1.4rem, 600, variaveis.$cor-primaria);
+        }
+    }
+    
+}
+
+
+      
+  

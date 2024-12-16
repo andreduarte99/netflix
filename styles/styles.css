@@ -1,4 +1,26 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.app_background {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  background-image: url("../../assets/banner.png"); /* Corrigido */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.app_background .container_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+.app_background .container_banner .descricao_banner {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */
