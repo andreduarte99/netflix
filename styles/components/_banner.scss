@@ -1,26 +1,77 @@
-@use '../abstract/variaveis';
-@use '../abstract/mixins';
+@use "../abstract/variaveis";
+@use "../abstract/mixins";
 
-.app_background { 
+.app_background {
+  display: flex;
+  flex-direction: column;
+  padding: variaveis.$padding-padrao;
+  background-image: url("../../assets/banner.png"); /* Corrigido */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  .container_banner {
     display: flex;
     flex-direction: column;
-    padding: variaveis.$padding-padrao;
-    background-image: url('../../assets/banner.png'); /* Corrigido */
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    .container_banner {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 80vh;
-        .descricao_banner{
-            @include mixins.ff-fs-fw-cl(variaveis.$font-primaria, 1.4rem, 600, variaveis.$cor-primaria);
-        }
+    justify-content: center;
+    height: 80vh;
+    .descricao_banner {
+      @include mixins.ff-fs-fw-cl(
+        variaveis.$font-primaria,
+        1.4rem,
+        600,
+        variaveis.$cor-primaria
+      );
     }
-    
+    .container__banner-botoes {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .btn__banner-play {
+      @include mixins.ff-fs-fw-cl(
+        variaveis.$font-primaria,
+        1.4rem,
+        600,
+        variaveis.$cor-secundaria
+      );
+      border-radius: 2px;
+      border: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 10px 40px 10px 30px;
+      gap: 8px;
+    }
+    .btn__banner-play::before {
+      content: "";
+      position: static;
+      background-image: url("../../assets/play.png");
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+    .btn__banner-info {
+      @include mixins.ff-fs-fw-cl(
+        variaveis.$font-primaria,
+        1.4rem,
+        600,
+        variaveis.$cor-primaria
+      );
+      border-radius: 2px;
+      border: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 40px 10px 30px;
+      background-color: rgba(128, 128, 128, 0.8);
+    }
+    .btn__banner-info::before {
+      content: "";
+      position: static;
+      background-image: url("../../assets/info.png");
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
-
-
-      
-  
