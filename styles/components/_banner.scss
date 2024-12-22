@@ -9,11 +9,76 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20%;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    z-index: 1000;
+    .logo {
+      width: 180px;
+      height: 50px;
+      cursor: pointer;
+    }
+    .lista__menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 1rem;
+      @include mixins.ff-fs-fw-cl(
+        variaveis.$font-primaria,
+        1.2rem,
+        500,
+        variaveis.$cor-primaria
+      );
+      cursor: pointer;
+    }
+    .menu__logo-opcoes {
+      display: flex;
+      align-items: center;
+    }
+    .menu__icones {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+      .icones__user {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .icone__opcoes {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
   .container_banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 80vh;
+    position: relative;
+    z-index: 2;
     .descricao_banner {
       @include mixins.ff-fs-fw-cl(
         variaveis.$font-primaria,
@@ -25,53 +90,69 @@
     .container__banner-botoes {
       display: flex;
       gap: 1.5rem;
+      .btn__banner-play {
+        @include mixins.ff-fs-fw-cl(
+          variaveis.$font-primaria,
+          1.4rem,
+          600,
+          variaveis.$cor-secundaria
+        );
+        border-radius: 2px;
+        border: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px 40px 10px 30px;
+        gap: 8px;
+        cursor: pointer;
+      }
+      .btn__banner-play::before {
+        content: "";
+        position: static;
+        background-image: url("../../assets/play.png");
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+      }
+      .btn__banner-info {
+        @include mixins.ff-fs-fw-cl(
+          variaveis.$font-primaria,
+          1.4rem,
+          600,
+          variaveis.$cor-primaria
+        );
+        border-radius: 2px;
+        border: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 40px 10px 30px;
+        background-color: rgba(128, 128, 128, 0.8);
+        cursor: pointer;
+      }
+      .btn__banner-info::before {
+        content: "";
+        position: static;
+        background-image: url("../../assets/info.png");
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+      }
     }
-    .btn__banner-play {
-      @include mixins.ff-fs-fw-cl(
-        variaveis.$font-primaria,
-        1.4rem,
-        600,
-        variaveis.$cor-secundaria
-      );
-      border-radius: 2px;
-      border: none;
-      position: relative;
-      display: flex;
-      align-items: center;
-      padding: 10px 40px 10px 30px;
-      gap: 8px;
-    }
-    .btn__banner-play::before {
-      content: "";
-      position: static;
-      background-image: url("../../assets/play.png");
-      background-size: contain;
-      width: 20px;
-      height: 20px;
-    }
-    .btn__banner-info {
-      @include mixins.ff-fs-fw-cl(
-        variaveis.$font-primaria,
-        1.4rem,
-        600,
-        variaveis.$cor-primaria
-      );
-      border-radius: 2px;
-      border: none;
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 40px 10px 30px;
-      background-color: rgba(128, 128, 128, 0.8);
-    }
-    .btn__banner-info::before {
-      content: "";
-      position: static;
-      background-image: url("../../assets/info.png");
-      background-size: contain;
-      width: 20px;
-      height: 20px;
-    }
+  }
+}
+.filmes {
+  margin-top: -22px;
+  padding: variaveis.$padding-padrao;
+  background-color: variaveis.$cor-secundaria;
+  @include mixins.ff-fs-fw-cl(
+    variaveis.$font-primaria,
+    1.4rem,
+    600,
+    variaveis.$cor-primaria
+  );
+  .descricao__categoria {
+    z-index: 0;
   }
 }

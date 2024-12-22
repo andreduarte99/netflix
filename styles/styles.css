@@ -12,11 +12,70 @@ body {
   background-size: cover;
   height: 100vh;
 }
+.app_background::before, .app_background::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20%;
+  z-index: 1;
+}
+.app_background::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.app_background::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.app_background .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: 1000;
+}
+.app_background .menu .logo {
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+}
+.app_background .menu .lista__menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+}
+.app_background .menu .menu__logo-opcoes {
+  display: flex;
+  align-items: center;
+}
+.app_background .menu .menu__icones {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+.app_background .menu .menu__icones .icones__user {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.app_background .menu .menu__icones .icone__opcoes {
+  width: 14px;
+  height: 14px;
+}
 .app_background .container_banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 80vh;
+  position: relative;
+  z-index: 2;
 }
 .app_background .container_banner .descricao_banner {
   font-family: "Arial", "Helvetica", sans-serif;
@@ -28,7 +87,7 @@ body {
   display: flex;
   gap: 1.5rem;
 }
-.app_background .container_banner .btn__banner-play {
+.app_background .container_banner .container__banner-botoes .btn__banner-play {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
@@ -40,8 +99,9 @@ body {
   align-items: center;
   padding: 10px 40px 10px 30px;
   gap: 8px;
+  cursor: pointer;
 }
-.app_background .container_banner .btn__banner-play::before {
+.app_background .container_banner .container__banner-botoes .btn__banner-play::before {
   content: "";
   position: static;
   background-image: url("../../assets/play.png");
@@ -49,7 +109,7 @@ body {
   width: 20px;
   height: 20px;
 }
-.app_background .container_banner .btn__banner-info {
+.app_background .container_banner .container__banner-botoes .btn__banner-info {
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
@@ -62,12 +122,26 @@ body {
   gap: 8px;
   padding: 10px 40px 10px 30px;
   background-color: rgba(128, 128, 128, 0.8);
+  cursor: pointer;
 }
-.app_background .container_banner .btn__banner-info::before {
+.app_background .container_banner .container__banner-botoes .btn__banner-info::before {
   content: "";
   position: static;
   background-image: url("../../assets/info.png");
   background-size: contain;
   width: 20px;
   height: 20px;
+}
+
+.filmes {
+  margin-top: -22px;
+  padding: 0 5%;
+  background-color: #000000;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.filmes .descricao__categoria {
+  z-index: 0;
 }/*# sourceMappingURL=styles.css.map */
