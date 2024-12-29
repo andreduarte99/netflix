@@ -27,6 +27,7 @@ body {
 .app_background::after {
   bottom: 0;
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  color: white;
 }
 .app_background .menu {
   display: flex;
@@ -132,9 +133,16 @@ body {
   width: 20px;
   height: 20px;
 }
+.app_background .descricao__categoria-banner {
+  color: white;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1000;
+}
 
 .filmes {
-  margin-top: -22px;
   padding: 0 5%;
   background-color: #000000;
   font-family: "Arial", "Helvetica", sans-serif;
@@ -142,6 +150,76 @@ body {
   font-weight: 600;
   color: #ffffff;
 }
-.filmes .descricao__categoria {
-  z-index: 0;
+.filmes .container__filmes {
+  display: grid;
+  grid-template-rows: 2;
+}
+.filmes .container__filmes .descricao__categoria {
+  grid-row: 1/2;
+}
+.filmes .container__filmes .div__filmes {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(5, 351px);
+  gap: 8px;
+}
+.filmes .container__filmes .div__filmes .-animacao {
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.filmes .container__filmes .div__filmes .-animacao:hover {
+  transform: scale(1.05);
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+}
+.filmes .container__filmes .div__filmes .-animacao:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  background-color: rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding: 0 5%;
+  background-color: #000000;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+.footer .icones__rede-social {
+  display: inline-block;
+  background-image: url("");
+}
+.footer p {
+  opacity: 0.7;
+}
+.footer p:hover {
+  text-decoration: underline;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+.footer .div__link-servico {
+  margin: 50px 0px;
+}
+.footer .div__link-servico .link__servico {
+  opacity: 0.7;
+  border: solid 1px #ffffff;
+  padding: 10px 10px;
+}
+.footer .div__link-servico .link__servico:hover {
+  cursor: pointer;
+  color: #ffffff;
+  opacity: 1;
+}
+.footer .direitos__autorais:hover {
+  opacity: 0.7;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
