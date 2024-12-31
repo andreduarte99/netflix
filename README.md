@@ -4,7 +4,7 @@ Cópia da página do Netflix, praticando SASS e JavaScript.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Clone Netflix**
+| :sparkles: Nome        | **Netflix**
 | :label: Tecnologias | Grid, SASS, JavaScript.
 | :rocket: URL         | https://netflix-lilac-rho.vercel.app/
 | :fire: Desafio     | https://7daysofcode.io/matricula/html-css-netflix
