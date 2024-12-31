@@ -1,6 +1,6 @@
-# Clone Netflix
+# Netflix
 
-Página clone do Netflix, praticando SASS e JavaScript.
+Cópia da página do Netflix, praticando SASS e JavaScript.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
