@@ -203,7 +203,9 @@
       grid-template-columns: 72px repeat(4, 351px) 72px;
       gap: 8px;
       align-items: center;
-      justify-content: center;
+      justify-content: start;
+      padding-left: 5%;
+      padding-right: 5%;
       #arrow-left {
         width: 72px;
         height: 72px;
