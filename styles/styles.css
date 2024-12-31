@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -182,20 +183,95 @@ body {
   background-color: rgba(255, 0, 0, 0.5);
   pointer-events: none;
 }
+.filmes .container__filmes .div__filmes.carousel {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 72px repeat(4, 351px) 72px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.filmes .container__filmes .div__filmes.carousel #arrow-left {
+  width: 72px;
+  height: 72px;
+  background-image: url("../../assets/chevron_left.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  outline: none;
+  transition: transform 0.2s ease, background-image 0.2s ease; /* Transição suave */
+}
+.filmes .container__filmes .div__filmes.carousel #arrow-left:hover {
+  transform: scale(1.5);
+}
+.filmes .container__filmes .div__filmes.carousel #arrow-right {
+  width: 72px;
+  height: 72px;
+  background-image: url("../../assets/chevron_right.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  outline: none;
+  transition: transform 0.2s ease, background-image 0.2s ease; /* Transição suave */
+}
+.filmes .container__filmes .div__filmes.carousel #arrow-right:hover {
+  transform: scale(1.5);
+}
 
 .footer {
   display: grid;
   grid-template-columns: repeat(4, auto);
   padding: 0 5%;
+  padding-top: 20px;
   background-color: #000000;
   font-family: "Arial", "Helvetica", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: #ffffff;
 }
-.footer .icones__rede-social {
+.footer .icone__facebook {
   display: inline-block;
-  background-image: url("");
+  background-image: url("../../assets/facebook-f-brands-solid.svg");
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.footer .icone__instagram {
+  display: inline-block;
+  background-image: url("../../assets/instagram-brands-solid.svg");
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.footer .icone__twitter {
+  display: inline-block;
+  background-image: url("../../assets/x-twitter-brands-solid.svg");
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.footer .icone__youtube {
+  display: inline-block;
+  background-image: url("../../assets/youtube-brands-solid.svg");
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  margin-top: 5px;
 }
 .footer p {
   opacity: 0.7;
